@@ -1,0 +1,11 @@
+name: CI Check
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: JS syntax check
+        run: node -c js/script.js
